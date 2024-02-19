@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// sets the target node from b to a
 // setea el nodo target de (b) a (a)
 static void	set_target_b(t_stack_node *a, t_stack_node *b)
 {
@@ -40,6 +41,7 @@ static void	set_target_b(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+// updates the node's info to do the pushing back
 // actualiza los datos necesaris para poder mover los nodos de (b) a (a)
 void	update_nodes_b(t_stack_node *a, t_stack_node *b)
 {

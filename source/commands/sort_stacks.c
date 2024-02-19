@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// ensures to have the minimum value node to the top 
 // situa el nodo de menor valor en la 
 // cabeza de la pila para terminar el sorting
 static void	min_to_top(t_stack_node **a)
@@ -28,6 +29,8 @@ static void	min_to_top(t_stack_node **a)
 	}
 }
 
+//ensures to have the cheapest node (a) on top and the target node (b) on
+//on top of each stack. AUX OF MOVE FUNCTIONS
 // situa el cheapest_node en el head de a o 
 //su target en el head de b de forma eficiente
 static void	prep_4_push(t_stack_node **stack, t_stack_node *top_node,
@@ -52,6 +55,8 @@ static void	prep_4_push(t_stack_node **stack, t_stack_node *top_node,
 	}
 }
 
+//ensures to have the cheapest node (a) on top and the target node (b) on
+//on top of each stack.
 //usa el nodo de menos coste y su target para colocarlos en el head de la pila.
 //aprovecha para comprobar si puede usar rotaciones simultaneas
 static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
@@ -66,9 +71,10 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 		reverse_rotate_both(a, b, cheapest_node);
 	prep_4_push(a, cheapest_node, 'a');
 	prep_4_push(b, cheapest_node->target_node, 'b');
-	pb(a, b);
+	pb(b, a);
 }
 
+// sets the b target on top to do the pushing back
 // situa el b->target en la cabeza de la pila de a para proceder al pushback
 static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 {
@@ -76,6 +82,7 @@ static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 	pa(a, b);
 }
 
+// coordinates the sorting
 // funcion que orquesta el sorting del stack
 void	sort_stack(t_stack_node **a, t_stack_node **b)
 {

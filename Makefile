@@ -24,7 +24,7 @@ OBJ_DIR = obj
 CC = gcc
 
 # Opciones de compilación
-CFLAGS = -Wall -Wextra -Werror -g -I$(SRC_DIR) -I./$(INC_DIR) 
+CFLAGS = -Wall -Wextra -Werror #-g 
 
 # Archivos fuente
 SRCS = \
@@ -54,7 +54,7 @@ $(NAME): $(OBJS)
 
 # Regla para compilar cada archivo fuente individualmente
 %.o: %.c Makefile
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -I./$(SRC_DIR) -I./$(INC_DIR) -c $< -o $@
 
 # Regla para limpiar archivos generados durante la compilación
 clean:

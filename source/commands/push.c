@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// moves the top node from one stack to the other
 // funcion que mueve el primer nodo de un stack a otro
 static void	push(t_stack_node **dst, t_stack_node **src)
 {

@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// sets the cheapest node
 // setea el nodo de menor coste de mover
 static void	set_cheapest(t_stack_node *stack)
 {
@@ -34,6 +35,7 @@ static void	set_cheapest(t_stack_node *stack)
 	cheapest_node->cheapest = true;
 }
 
+// analyses push costs
 // analiza el coste de los movimientos 
 static void	cost_analysis(t_stack_node *a, t_stack_node *b)
 {
@@ -56,6 +58,7 @@ static void	cost_analysis(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+// sets the target node a to b
 // setea el nodo target de (a) a (b)
 static void	set_target_a(t_stack_node *a, t_stack_node *b)
 {
@@ -84,6 +87,7 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+// sets the current position above or under the median
 // setea la posicion del nodo actual para saber
 // si esta por arriba o a bajo de la mitad del stack 
 void	current_index(t_stack_node *stack)
@@ -107,6 +111,7 @@ void	current_index(t_stack_node *stack)
 	}
 }
 
+// Update the information of the nodes to enable optimal pushing
 // actualiza los datos de los nodos para poder hacer el push de menor coste
 void	update_nodes_a(t_stack_node *a, t_stack_node *b)
 {

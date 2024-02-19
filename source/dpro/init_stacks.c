@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// string to long type
 // convierte de string a long
 static long	ft_atol(const char *s)
 {
@@ -31,6 +32,7 @@ static long	ft_atol(const char *s)
 	return (nbr * sign);
 }
 
+// appends a node to the stack
 // añade un nodo al stack
 static void	append_node(t_stack_node **stack, int n)
 {
@@ -58,6 +60,7 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 }
 
+// stack initialization
 // inicializa el stack
 void	init_stack_a(t_stack_node **a, char **argv)
 {
@@ -80,7 +83,8 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	}
 }
 
-// devuelve el nodo que tiene el nodo de menos coste so far.
+// returns the cheapest node so far.
+// devuelve el nodo que tiene el nodo de menos hasta el momento.
 t_stack_node	*get_cheapest(t_stack_node *stack)
 {
 	if (!stack)

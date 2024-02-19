@@ -14,6 +14,7 @@
 #include <assert.h>
 #include <stdio.h>
 
+// moves the first node to the last
 // funcion que mueve el primer nodo del stack al ultimo
 static void	rotate(t_stack_node **stack)
 {
@@ -52,8 +53,6 @@ void	rr(t_stack_node **a, t_stack_node **b)
 // de sendos stacks antes de ejecutar rr de forma iterativa
 void	rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest)
 {
-	printf("*a: %p, cheapest: %p\n", *a, cheapest);
-
 	while (*a != cheapest && *b != cheapest->target_node)
 		rr(a, b);
 	current_index(*a);

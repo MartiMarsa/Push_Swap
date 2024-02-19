@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+// moves the last node to the first
 // funcion que mueve el ultimo nodo del stack al primero.
 static void	reverse_rotate(t_stack_node **stack)
 {

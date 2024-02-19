@@ -12,6 +12,7 @@
 
 #include "../../includes/push_swap.h"
 
+//print function in STDOUT and STDDERROR
 //funcion para mostrar por pantalla los movimientos o errores
 int	ft_putstr_fd(char *s, int fd)
 {
@@ -25,6 +26,7 @@ int	ft_putstr_fd(char *s, int fd)
 	return(write(fd, s, len));
 }
 
+// finds de last node of the stack
 // encuentra el ultimo nodo del stack
 t_stack_node	*find_last(t_stack_node *stack)
 {
@@ -35,6 +37,7 @@ t_stack_node	*find_last(t_stack_node *stack)
 	return (stack);
 }
 
+// returns the stack length
 // devuelve la cantidad de nodos de un stack
 int	stack_len(t_stack_node *stack)
 {
@@ -51,6 +54,7 @@ int	stack_len(t_stack_node *stack)
 	return (i);
 }
 
+// finds the maximum value node
 // encuentra el nodo que tiene el valor maximo
 t_stack_node	*find_max(t_stack_node *stack)
 {
@@ -68,6 +72,7 @@ t_stack_node	*find_max(t_stack_node *stack)
 	return (max);
 }
 
+// finds the minimun value node
 // encuentra el nodo que tiene el valor minimo
 t_stack_node	*find_min(t_stack_node *stack)
 {

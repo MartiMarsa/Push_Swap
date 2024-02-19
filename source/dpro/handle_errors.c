@@ -13,7 +13,7 @@
 #include "../../includes/push_swap.h"
 #include <stdio.h>
 
-// comprueba si son carácteres correctos
+// check if the parameters are digits. comprueba si son carácteres correctos
 int	error_syntax(char *str)
 {
 	if (!str)
@@ -32,7 +32,7 @@ int	error_syntax(char *str)
 }
 
 
-// comprueba si hay duplicados
+// check if we have duplicates. comprueba si hay duplicados
 int	error_duplicate(t_stack_node *a, int n)
 {
 	if (!a)
@@ -46,7 +46,8 @@ int	error_duplicate(t_stack_node *a, int n)
 	return (0);
 }
 
-// libera  el stack si se han encontrado errores
+// free stack mem if we found errors.
+// libera el stack si se han encontrado errores
 void	free_stack(t_stack_node **stack)
 {
 	t_stack_node	*tmp;
@@ -64,6 +65,7 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
+// call free function and prints in stderr
 // llama a la funcion para liberar y imprime por pantalla error
 void	free_errors(t_stack_node **a)
 {
