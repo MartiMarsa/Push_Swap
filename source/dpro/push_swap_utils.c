@@ -21,9 +21,9 @@ int	ft_putstr_fd(char *s, int fd)
 	len = 0;
 	if (!s)
 		return (0);
-	while(s[len])
+	while (s[len])
 		len++;
-	return(write(fd, s, len));
+	return (write(fd, s, len));
 }
 
 // finds de last node of the stack

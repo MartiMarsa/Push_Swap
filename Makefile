@@ -24,7 +24,7 @@ OBJ_DIR = obj
 CC = gcc
 
 # Opciones de compilación
-CFLAGS = -Wall -Wextra -Werror #-g 
+CFLAGS = -Wall -Wextra -Werror -g 
 
 # Archivos fuente
 SRCS = \

@@ -22,15 +22,16 @@ int	error_syntax(char *str)
 		return (1);
 	if (*str == '-' || *str == '+')
 		str++;
+	if (*str < '0' || *str > '9')
+		return (1);
 	while (*str)
 	{
-		if (*str < '0' || *str  > '9')
+		if (*str < '0' || *str > '9')
 			return (1);
 		str++;
 	}
 	return (0);
 }
-
 
 // check if we have duplicates. comprueba si hay duplicados
 int	error_duplicate(t_stack_node *a, int n)
