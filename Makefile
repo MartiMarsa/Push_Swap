@@ -41,7 +41,6 @@ SRCS = \
 	$(DPRO_DIR)/init_stacks.c \
 	$(DPRO_DIR)/main.c \
 	$(DPRO_DIR)/push_swap_utils.c \
-	$(DPRO_DIR)/splitf.c \
 	$(DPRO_DIR)/update_nodes_a_to_b.c \
 	$(DPRO_DIR)/update_nodes_b_to_a.c \
 
