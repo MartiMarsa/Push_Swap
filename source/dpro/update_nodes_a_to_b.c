@@ -16,13 +16,13 @@
 // setea el nodo de menor coste de mover
 static void	set_cheapest(t_stack_node *stack)
 {
-	long			cheapest;
+	int				cheapest;
 	t_stack_node	*cheapest_node;
 
 	cheapest_node = NULL;
 	if (!stack)
 		return ;
-	cheapest = LONG_MAX;
+	cheapest = INT_MAX;
 	while (stack)
 	{
 		if (stack->push_cost < cheapest)
@@ -64,11 +64,11 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*target_node;
 	t_stack_node	*current_b;
-	long			best_match;
+	int				best_match;
 
 	while (a)
 	{
-		best_match = LONG_MIN;
+		best_match = INT_MIN;
 		current_b = b;
 		while (current_b)
 		{
@@ -79,7 +79,7 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)
 			}
 			current_b = current_b->next;
 		}
-		if (best_match == LONG_MIN)
+		if (best_match == INT_MIN)
 			a->target_node = find_max(b);
 		else
 			a->target_node = target_node;
