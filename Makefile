@@ -48,7 +48,7 @@ all: $(NAME)
 $(NAME): $(OBJS) 
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.c $(DEPS) Makefile
+%.o: %.c $(INC) Makefile
 	$(CC) $(CFLAGS) -I./$(SRC_DIR) -I./$(INC_DIR) -c $< -o $@
 
 clean:
